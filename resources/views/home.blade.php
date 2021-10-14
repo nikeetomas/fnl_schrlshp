@@ -1,124 +1,74 @@
-@extends('layouts.app')
+@extends('layouts.sidebar')
 
-<link rel="stylesheet" href="style.css">
-    <!-- Boxicons CDN Link -->
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    
-@section('content')
-<div class="sidebar">
-    <!--<div class="logo-details">
-      <i class='bx bxl-c-plus-plus icon'></i>
-        <div class="logo_name">Scholarship</div>
-        <i class='bx bx-menu' id="btn" ></i>
-    </div>
-    <ul class="nav-list">
-    
-        <li>
-          <i class='bx bx-search' ></i>
-         <input type="text" placeholder="Search...">
-         <span class="tooltip">Search</span>
-      </li>
-    --> 
-        <li>
-       <a href="#">
-         <i class='bx bx-user' ></i>
-         <span class="links_name">User</span>
-       </a>
-       <span class="tooltip">User</span>
-     </li>
-      
-     <!-- <li>
-        <a href="#">
-          <i class='bx bx-grid-alt'></i>
-          <span class="links_name">Dashboard</span>
-        </a>
-         <span class="tooltip">Dashboard</span>
-      </li> -->
-        <li>
-         <a href="#">
-         <i class='bx bx-plus-circle' ></i>
-         <span class="links_name">Add Scholar</span>
-       </a>
-       <span class="tooltip">Add Scholar</span>
-     </li>
-      
-     <li>
-       <a href="#">
-         <i class='bx bx-collection' ></i>
-         <span class="links_name">Scholarship Programs</span>
-       </a>
-       <span class="tooltip">Scholarship Programs</span>
-     </li>
-     <li>
-       <a href="#">
-         <i class='bx bx-grid' ></i>
-         <span class="links_name">Colleges</span>
-       </a>
-       <span class="tooltip">Colleges</span>
-     </li>
-     <li>
-       <a href="#">
-         <i class='bx bxs-heart' ></i>
-         <span class="links_name">Donors</span>
-       </a>
-       <span class="tooltip">Donors</span>
-     </li>
-     <li>
-       <a href="#">
-         <i class='bx bx-cog' ></i>
-         <span class="links_name">Settings</span>
-       </a>
-       <span class="tooltip">Setting</span>
-     </li>
-     
-    </ul>
-  </div>
- <!--<section class="home-section">
-      <div class="text">Dashboard</div>
-  </section> -->
-  <script>
-  let sidebar = document.querySelector(".sidebar");
-  let closeBtn = document.querySelector("#btn");
-  let searchBtn = document.querySelector(".bx-search");
+@extends('layouts.navbar')
 
-  closeBtn.addEventListener("click", ()=>{
-    sidebar.classList.toggle("open");
-    menuBtnChange();//calling the function(optional)
-  });
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
-    sidebar.classList.toggle("open");
-    menuBtnChange(); //calling the function(optional)
-  });
+<!-- Boxicons -->
+<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+<!-- My CSS -->
+<link rel="stylesheet" href="css/style.css">
 
-  // following are the code to change sidebar button(optional)
-  function menuBtnChange() {
-   if(sidebar.classList.contains("open")){
-     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
-   }else {
-     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
-   }
-  }
-  </script>
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+<title>Admin</title>
+</head>
+<body>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+<!-- CONTENT -->
+      <section id="content">
 
-                    {{ __('You are logged in!') }}
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-@endsection
+<!-- MAIN -->
+            <main>
+              <div class="head-title">
+                <div class="left">
+                    <h1>Dashboard</h1>
+                        <ul class="breadcrumb">
 
- 
+              <li>
+                  <a href="#">Dashboard</a>
+              </li>
+                    <li><i class='bx bx-chevron-right' ></i></li>
+              <li>
+                  <a class="active" href="#">Home</a>
+              </li>
+              </ul>
+
+              <ul class="box-info">
+    <li>
+        <i class='bx bx-trending-up' ></i>
+            <span class="text">
+              <h3>1020</h3>
+                <p>Total number of Scholar</p>
+        </span>
+    </li>
+
+    <li>
+        <i class='bx bxs-bar-chart-alt-2' ></i>
+            <span class="text">
+              <h3>35</h3>
+                <p>Number of Available Scholarship</p>
+          </span>
+    </li>
+
+    <li>
+        <i class='bx bx-question-mark' ></i>
+          <span class="text">
+            <h3>TBA</h3>
+                <p>etc</p>
+          </span>
+    </li>
+</ul>
+
+
+</main>
+<!-- MAIN -->
+</section>
+<!-- CONTENT -->
+
+
+<script src="js/script.js"></script>
+</body>
+</html>
