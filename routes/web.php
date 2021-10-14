@@ -20,3 +20,7 @@ Route::get('/', function () {
 Auth::routes(['verify' => true]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/scholarships', [App\Http\Controllers\HomeController::class, 'scholarships'])->name('scholarships');
+Route::get('/colleges', [App\Http\Controllers\HomeController::class, 'colleges'])->name('colleges');
+Route::get('/donor', [App\Http\Controllers\HomeController::class, 'donor'])->name('donor');
