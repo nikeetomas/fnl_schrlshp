@@ -8,6 +8,7 @@
       <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 <!-- My CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <title>Admin</title>
     </head>
@@ -111,9 +112,9 @@
           <li>
               <a class="active" href="#">Home</a>
         </li>
-
+  <div class="container">
         <table class="table table-hover">
-          <thead class="thead-dark">
+          <thead class="table-dark">
              <tr>
                 <th scope="col">Scholarship Type</th>
                 <th scope="col">Scholarship</th>
@@ -125,20 +126,20 @@
               </tr>
             </thead>
               <tbody>
-                  @foreach($schlrship as $scholarship)
+                  @foreach($scholarships as $sprogram)
                   <tr>
-                <td>{{$scholarship['scholarship_type']}}</td>
-                <td>{{$scholarship['scholarship']}}</td>
-                <td>{{$scholarship['discount']}}</td>
-                <td>{{$scholarship['sem_charged']}}</td>
-                <td>{{$scholarship['funded_by']}}</td>
-                <td>{{$scholarship['chargedfull']}}</td>
-                <td>{{$scholarship['active']}}</td>
+                <td>{{$sprogram['scholarship_type']}}</td>
+                <td>{{$sprogram['scholarship']}}</td>
+                <td>{{$sprogram['discount']}}</td>
+                <td>{{$sprogram['sem_charged']}}</td>
+                <td>{{$sprogram['funded_by']}}</td>
+                <td>{{$sprogram['chargedfull']}}</td>
+                <td>{{$sprogram['active']}}</td>
 
               </tr>
                   @endforeach
           </table>
-
+  </div>
 
 <script src="js/script.js"></script>
 </body>

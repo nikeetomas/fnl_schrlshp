@@ -28,8 +28,8 @@ class HomeController extends Controller
     }
     
     public function scholarships(){
-        $sprogram = Scholarship :: simplePaginate(5);
-        return view('pages.scholarships',['schrlship'=> $sprogram]);
+        $sprogram = Scholarship :: simplePaginate(10);
+        return view('pages.scholarships',['scholarships'=> $sprogram]);
 
     }
 
